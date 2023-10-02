@@ -97,7 +97,9 @@ namespace collabDB
               new TaskState { TaskStateId = 2, Description = "InProgress" },
               new TaskState { TaskStateId = 3, Description = "Completed" },
               new TaskState { TaskStateId = 4, Description = "Delayed" },
-              new TaskState { TaskStateId = 5, Description = "StandBy" }
+              new TaskState { TaskStateId = 5, Description = "StandBy" },
+              new TaskState { TaskStateId = 6, Description = "Deleted" }
+
 
 
           );

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using collabDB;
 
@@ -11,9 +12,11 @@ using collabDB;
 namespace collabDB.Migrations
 {
     [DbContext(typeof(CollabContext))]
-    partial class CollabContextModelSnapshot : ModelSnapshot
+    [Migration("20231002194730_DELETEDTaskState")]
+    partial class DELETEDTaskState
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

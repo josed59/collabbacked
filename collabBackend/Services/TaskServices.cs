@@ -92,7 +92,7 @@ namespace collabBackend.Services
                    TaskState = taskState,
                }
            )
-           .Where(result => result.TaskState.TaskStateId != 4) //condición TaskStateId != 4 aquí
+           .Where(result => result.TaskState.TaskStateId != 6) //condición TaskStateId != 6  Deleted task
            .GroupJoin(
                context.Users,
                userTaskAndTaskSizeAndTaskState => userTaskAndTaskSizeAndTaskState.UserTask.UserId,
@@ -397,7 +397,7 @@ namespace collabBackend.Services
                     }
                     if (updateTask.isDeleted == true)
                     {
-                        userTask.TaskStateId = 4;
+                        userTask.TaskStateId = 6;
                         userTask.UserId = null;
                     }
 
