@@ -177,7 +177,8 @@ namespace collabBackend.Controllers
                 var result = await TaskServices.assingTask(assingTask, HttpContext);
                 if (result.Success)
                 {
-                    Guid prevUser = (Guid)result.Data;
+                    //validate if result.Data if null
+                    Guid prevUser = (result.Data != null && !string.IsNullOrEmpty(result.Data.ToString())) ? (Guid)result.Data : Guid.Empty;
                     await UserServices.updateCapacity(assingTask.taskID,prevUser);
                     return Ok(result);
                 }

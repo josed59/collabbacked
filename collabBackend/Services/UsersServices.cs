@@ -358,7 +358,8 @@ namespace collabBackend.Services
                 {
                     return;
                 }
-                foreach (var currentUserId in new[] { userId.UserId, prevUseriD })
+                var nullIfprevUseriDIsEmpty = (prevUseriD == Guid.Empty) ? null : prevUseriD;
+                foreach (var currentUserId in new[] { userId.UserId, nullIfprevUseriDIsEmpty })
                 {
                     if (currentUserId.HasValue)
                     {
