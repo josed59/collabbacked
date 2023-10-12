@@ -51,7 +51,9 @@ builder.Services.AddCors(options =>
                       policy =>
                       {
                           policy.WithOrigins("http://172.21.216.122:3006",
-                                             "https://yellow-flower-0d72f9810.3.azurestaticapps.net"
+                                             "https://yellow-flower-0d72f9810.3.azurestaticapps.net",
+                                             "http://192.168.50.16:3006"
+
                               )
                           .AllowAnyHeader()
                           .AllowAnyMethod();
