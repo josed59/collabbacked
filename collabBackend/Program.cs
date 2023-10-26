@@ -50,10 +50,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins,
                       policy =>
                       {
-                          policy.WithOrigins("http://172.21.216.122:3006",
-                                             "https://yellow-flower-0d72f9810.3.azurestaticapps.net",
-                                             "http://192.168.50.16:3006"
-
+                          policy.WithOrigins("yourorigins.com"
                               )
                           .AllowAnyHeader()
                           .AllowAnyMethod();
